@@ -47,12 +47,13 @@ public class HomeActivity extends AppCompatActivity {
                 .setDrawerLayout(drawer)
                 .build();
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
-        NavController navController = navHostFragment.getNavController();
+        NavController navController = navHostFragment.getNavController(); //custom code to get fragment controller
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
     @Override
+    
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
